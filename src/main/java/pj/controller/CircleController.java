@@ -47,7 +47,7 @@ public class CircleController {
     @GetMapping("/info")
     public ResponseEntity<Map<String, Object>> getCircleInfo() {
         try {
-            Map<String, Object> info = new HashMap<String, Object>();
+            Map<String, Object> info = new HashMap<>();
             info.put("fileExists", circleFileService.fileExists());
             info.put("circlesCount", circleFileService.getCirclesCount());
             return ResponseEntity.ok(info);
